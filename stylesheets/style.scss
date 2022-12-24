@@ -1,0 +1,112 @@
+@import "colors";
+@import "reset";
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem 1.2rem;
+  position: relative;
+
+  header {
+    margin: 2rem 1.2rem;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1{
+      margin: 1rem;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: $Gray;
+      text-align: center;
+      #bold {
+        color: $VeryDarkBlue;
+        font-weight: 700;
+      }
+    }
+    h2 {
+      font-size: .75rem;
+      font-weight: 300;
+      text-align: center;
+    }
+    form {
+      width: 17.5rem;
+      margin: 1.5rem 0rem;
+      display: flex;
+      flex-direction: column;
+      #email-input{
+        border-radius: 28px;
+        padding: .5rem 1.6rem;
+        font-weight: 300;
+        font-family: 'Libre Franklin', sans-serif;
+        font-size: .66rem;
+        color: $Blue;
+        border: 2px solid $PaleBlue;
+      }
+      #email-input:focus{
+        outline: none;
+      }
+      #warning-message{
+        display: none;
+        font-size: .55rem;
+        font-style: italic;
+        color: $LightRed;
+        text-align: center;
+        margin-top: .2rem;
+        margin-bottom: 1rem;
+      }
+      #submit-button{
+        margin: .3rem 0rem;
+        background-color: $Blue;
+        color: white;
+        border-radius: 28px;
+        padding: 0.75rem;
+        font-family: 'Libre Franklin', sans-serif;
+        font-weight: 600;
+        font-size: 0.66rem;
+        box-shadow: 0 4px 4px hsla(0, 0%, 0%, .25%);
+        cursor: pointer;
+      }
+    }
+    img {
+      margin: .5rem;
+      width: 100%;
+    }
+  }
+  footer {
+    margin: 4rem 0;
+    #social-media-icons{
+      i{
+        margin: .5rem;
+      }
+      font-size: 1.6rem;
+      color: $Blue;
+      text-align: center;
+    }
+    #copyright{
+      margin: 1rem 0;
+      font-size: .5rem;
+      color: $Gray;
+      font-weight: 300;
+      text-align: center;
+    }
+    .attribution{
+      position: absolute;
+      bottom: 0;
+      left: 15%;
+      right: 15%;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+ form {
+  background-color: yellow;
+ }
+}

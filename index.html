@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <script src="https://kit.fontawesome.com/dfe0023370.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+
   <title>Frontend Mentor | Ping coming soon page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -14,21 +18,36 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
+
 <body>
-
-  We are launching soon!
-
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
+  <header>
+    <img src="./images/logo.svg">
+  </header>
+  <main>
+    <h1>We are launching <span id="bold">soon!</span></h1>
+    <h2>Subscribe and get notified</h2>
+    <form>
+      <input type="email" placeholder="Your email address ..." id="email-input">
+      <label id="warning-message">Please provide a valid email adress</label>
+      <input type="submit" value="Notify Me" id="submit-button">
+    </form>
+    <img src="./images/illustration-dashboard.png">
+  </main>
 
   <footer>
+    <p id="social-media-icons">
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-twitter"></i>
+    </p>
+    <p id="copyright">&copy; Copyright Ping. All rights reserved.</p>
+
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">dralveol</a>.
     </p>
   </footer>
+  <script type="text/javascript" src="./scripts/script.js"></script>
 </body>
+
 </html>
