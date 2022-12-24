@@ -4,10 +4,21 @@ const warningMessage = document.querySelector("#warning-message")
 submitButton.addEventListener("click", emailValidation);
 
 function emailValidation(e){
-	if (!isEmailValid(emailInput.value)){
-		emailInput.style.borderColor = 'red';
-		warningMessage.style.display = 'block';
+	e.preventDefault();
+	if (emailInput.value === "") {
+		warningMessage.innerText = "Whoops! It looks like you forgot to add your email";
+		displayError();
+		return
 	}
+	if (!isEmailValid(emailInput.value)){
+		warningMessage.innerText = "Please provide a valid email address";
+		displayError();
+	}
+}
+
+function displayError() {
+	emailInput.style.borderColor = 'red';
+	warningMessage.style.display = 'block';
 }
 
 function isEmailValid(email){
